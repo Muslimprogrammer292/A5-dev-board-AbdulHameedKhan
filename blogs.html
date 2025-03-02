@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class=" px-[7.71vw] bg-[#F4F7FF] min-h-screen">
+  <div class="flex flex-col mx-auto w-full gap-6">
+    <header class="bg-white mt-5 rounded-2xl p-4 my-5">
+      <nav class="flex justify-between">
+        <div class="flex gap-1 items-center">
+          <img src="assets/logo.png" alt="">
+          <h2 class="text-4xl">Dev<span class="font-bold">Board</span></h2>
+        </div>
+        <div class=" flex gap-12 justify-center items-center">
+          <a href="index.html"><button id="clear-history" class=" btn btn-active btn-primary rounded-lg text-lg w-48 p-5 bg-[#3752FD]">Back
+            to Desk</button></a>
+        </div>
+  </div>
+  </nav>
+  </header>
+  <h1 class="text-center text-3xl font-extrabold">Blogs</h1>
+  <div id="questions-container" class=" flex flex-col bg-white rounded-2xl w-full my-7">
+    <div class=" flex mb-2 gap-3 px-5 pt-5">
+      <p class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</p>
+    </div>
+    <hr class=" text-[#F4F7FF] border-[2px] mb-5 border-dashed">
+    <div id="answers-container" class="text-2xl text-gray-400 m-5 rounded">
+      The different ways to select an element are getElementById, getElementsByClassName, querySelector,
+      querySelectorAll.
+    </div>
+
+  </div>
+  <div id="questions-container" class=" flex flex-col bg-white rounded-2xl w-full my-7">
+    <div class=" flex mb-2 gap-3 px-5 pt-5">
+      <p class="text-2xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?
+      </p>
+    </div>
+    <hr class=" text-[#F4F7FF] border-[2px] mb-5 border-dashed">
+    <div id="answers-container" class=" m-5 rounded">
+      <p class="text-2xl text-gray-400">The innerText property gives the text content of the specific element or node in
+        question. it omits the extra spaces
+        The Inner Content element behaves similarly but istad of only giving the text content of the element or node in
+        target but gives also the text content of its child elements and does not omit extra spaces.
+        As for the innerHTML, it behaves differently. this property return all the html code included inside the
+        selected element.
+      </p>
+
+    </div>
+
+  </div>
+  <div id="questions-container" class=" flex flex-col bg-white rounded-2xl w-full my-7">
+    <div class=" flex mb-2 gap-3 px-5 pt-5">
+      <p class="text-2xl font-bold">Question-3: What is event delegation in the DOM?</p>
+    </div>
+    <hr class=" text-[#F4F7FF] border-[2px] mb-5 border-dashed">
+    <div id="answers-container" class="text-2xl text-gray-400 m-5 rounded">
+      Event delegation is when we apply event handlers to the parent element of the specific targeted element so that it
+      can fire on all the children elements whenever anyone of them is triggere. this process is facilated by the
+      eventbubbling
+    </div>
+
+  </div>
+  <div id="questions-container" class=" flex flex-col bg-white rounded-2xl w-full my-7">
+    <div class=" flex mb-2 gap-3 px-5 pt-5">
+      <p class="text-2xl font-bold">Question-4: What is event bubbling in the DOM?</p>
+    </div>
+    <hr class=" text-[#F4F7FF] border-[2px] mb-5 border-dashed">
+    <div id="answers-container" class="text-2xl text-gray-400 m-5 rounded">
+      event bubbling is a sort of propagation of events in the dom. when an event is applied on a specific element, it
+      will first of all execute on the target element than will fire on one by one all the parent elements of the target
+      element.
+    </div>
+
+  </div>
+  <div id="questions-container" class=" flex flex-col bg-white rounded-2xl w-full my-7">
+    <div class=" flex mb-2 gap-3 justify-center px-5 pt-5">
+      <p class="text-2xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+    </div>
+    <hr class=" text-[#F4F7FF] border-[2px] mb-5 border-dashed">
+    <div id="answers-container" class="text-2xl text-gray-400 m-5 rounded">
+      In order to create an element. we use the method createElement by adding it to dom like this
+      document.createElement(). We write the name of the element to be created.
+      Once an element is created or if the element already exists, we can add it to another parent element using the
+      method appendChild(). we write first of all where we want to add (we should first of all get that element amd
+      store it in a variable and then use the variable before the dot) it and then we put a dot followed by
+      appendChild(). In thhe brackets, we write the element to be added.
+      To remove a child from a parent, the process is similar but instead of appendChild we use removeChild() or remove()
+    </div>
+
+  </div>
+
+  </div>
+
+</body>
+
+</html>

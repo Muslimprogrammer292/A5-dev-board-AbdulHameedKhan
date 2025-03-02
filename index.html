@@ -46,8 +46,8 @@
               <p id="task-assigned" class="pl-2 text-[32px] pb-[2px] font-bold leading-7">6</p>
             </div>
           </div>
-          <div
-            onclick="window.location.href='blogs.html'" class="cursor-pointer discover h-[128px] col-span-2 flex justify-center p-8 gap-2 items-center border-black bg-blue-400 rounded-2xl">
+          <div onclick="window.location.href='blogs.html'"
+            class="cursor-pointer discover h-[128px] col-span-2 flex justify-center p-8 gap-2 items-center border-black bg-blue-400 rounded-2xl">
             <img src="assets/board.png" alt="">
             <p class="text-2xl text-white">Discover Something <br>New Today</p>
           </div>
@@ -192,22 +192,20 @@
     </section>
   </div>
   <script>
-    const currentHour = new Date().getHours();
-        let currentMinute = new Date().getMinutes();
-        let currentsSecond = new Date().getSeconds();
-        console.log(currentHour);
-        let ampm = '';
-        if (currentHour >= 12) {
-          ampm = 'PM';
-          currentHour = currentHour - 12;
-        } else {
-          ampm = 'AM';
-        }
-        const currentTime = currentHour + ':' + currentMinute + ':' + currentsSecond + ' ' + ampm;
-        const  CurrentTime = currentTime.toString();
-        console.log(CurrentTime);
+    let currentHour = new Date().getHours();
+    let currentMinute = new Date().getMinutes();
+    let currentsSecond = new Date().getSeconds();
+    let ampm = '';
+    if (currentHour >= 12) {
+      ampm = 'PM';
+      currentHour = currentHour - 12;
+    } else {
+      ampm = 'AM';
+    }
+    let currentTime = currentHour + ':' + currentMinute + ':' + currentsSecond + ' ' + ampm;
+    let CurrentTime = currentTime.toString();
 
-        document.getElementById('tasks-container').addEventListener('click', function (event) {
+    document.getElementById('tasks-container').addEventListener('click', function (event) {
       if (event.target.classList.contains('task')) {
         alert('Board updated successfully!');
         event.target.classList.add('challenge')
@@ -238,18 +236,17 @@
 
     })
     currentDate = new Date().toDateString();
-    const day = currentDate.slice(0,3);
-    const date = currentDate.slice(4,17);
+    const day = currentDate.slice(0, 3);
+    const date = currentDate.slice(4, 17);
     document.getElementById('current-day').innerText = day;
     document.getElementById('curent-date-1').innerText = date;
     let randomColorPicker = Math.floor(Math.random() * 16777215).toString(16);
-    console.log(randomColorPicker);
-    document.getElementById('color-picker').addEventListener('click',function(){
-      let reds = Math.floor(Math.random()*256);
-      let greens = Math.floor(Math.random()*256);
-      let blues = Math.floor(Math.random()*256);
+    document.getElementById('color-picker').addEventListener('click', function () {
+      let reds = Math.floor(Math.random() * 256);
+      let greens = Math.floor(Math.random() * 256);
+      let blues = Math.floor(Math.random() * 256);
       let colorpicker = `rgb(${reds},${greens},${blues})`;
-      document.body.style.backgroundColor = colorpicker; 
+      document.body.style.backgroundColor = colorpicker;
     })
   </script>
 

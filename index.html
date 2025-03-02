@@ -1,11 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ddddddddddddddddd</title>
+  <title>DevBoard</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <style>
+    .discover {
+      background: linear-gradient(to right, #3752FD, #6C7FFA, #9BA8F8)
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  
+
+<body class=" px-[7.71vw] bg-[#F4F7FF] min-h-screen">
+
+  <div class="flex flex-col mx-auto w-full gap-6">
+    <header class="bg-white mt-5 rounded-2xl p-4">
+      <nav class="flex justify-between">
+        <div class="flex gap-1 items-center">
+          <img src="assets/logo.png" alt="">
+          <h2 class="text-4xl">Dev<span class="font-bold">Board</span></h2>
+        </div>
+        <div class=" flex gap-12 justify-center items-center">
+          <div class="bg-[#F4F7FF] rounded-[32px] px-3 py-1 flex gap-2 justify-center items-center">
+            <img class="w-[32px]" src="assets/checkbox.png" alt="">
+            <p id="task-completed" class="pl-2 text-[32px] pb-[2px] font-bold">0</p>
+          </div>
+          <div>
+            <img id="color-picker" src="assets/theme-btn.png" alt="">
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="flex justify-between gap-[1.56vw] w-full mb-3">
+      <div id="tasks-container" class=" bg-white rounded-2xl w-full">
+        <div class="grid gap-6 grid-cols-4 items-center  mb-8 px-6 pt-6">
+          <div class="bg-[#F4F7FF] h-[128px] rounded-[12px] p-8 flex gap-2 justify-center items-center">
+            <div class="p-[18px] bg-white rounded-full">
+              <img class="w-[32px]" src="assets/checkbox.png" alt="">
+            </div>
+            <div>
+              <p class="pl-2 text-[16px] pb-[2px] leading-6">Task Assigned</p>
+              <p id="task-assigned" class="pl-2 text-[32px] pb-[2px] font-bold leading-7">6</p>
+            </div>
+          </div>
+          <div
+            class="discover h-[128px] col-span-2 flex justify-center p-8 gap-2 items-center border-black bg-blue-400 rounded-2xl">
+            <img src="assets/board.png" alt="">
+            <p class="text-2xl text-white">Discover Something <br>New Today</p>
+          </div>
+          <div class="h-[128px] flex gap-2 items-center bg-[#F4F7FF] p-6 rounded-2xl">
+            <div class="p-[18px] bg-white rounded-full"><img class="w-[32px] h-[32px]" src="assets/calender.png" alt="">
+            </div>
+            <div>
+              <p class="leading-6 text-[22px]" id="current-day"></p>
+              <p id="curent-date-1" class="leading-6 text-[22px] font-bold">Current Date</p>
+            </div>
+          </div>
+        </div>
+        <hr class="text-[#F4F7FF] border-[2px] border-dashed">
+        <div class="p-6 grid grid-cols-3 gap-9">
+          <div class="task p-6 space-y-4 rounded-2xl bg-[#F4F7FF]">
+            <div class="rounded-2xl px-4 py-2 bg-white w-[33.33%]">
+              <p>ShopEase</p>
+            </div>
+            <h2 class="leading-5 font-medium text-2xl ">Fix Mobile Button Issue</h2>
+            <div class="bg-white p-4 rounded-2xl">
+              <p class="text-gray-300 ">Optimize the buttons in the
+                page for all types of devices
+
+              </p>
+            </div>
+            <div class="mt-3 flex justify-between">
+              <div>
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="task btn btn-active btn-primary rounded-lg text-lg p-5 bg-[#3752FD]">Completed</button>
+            </div>
+
+          </div>
+          <div class=" p-6 space-y-4 rounded-2xl bg-[#F4F7FF]">
+            <div class="rounded-2xl px-4 py-2 bg-white w-[33.33%]">
+              <p>ShopEase</p>
+            </div>
+            <h2 class="leading-5 font-medium text-2xl ">Fix Mobile Button Issue</h2>
+            <div class="bg-white p-4 rounded-2xl">
+              <p class="text-gray-300 ">Optimize the buttons in the
+                page for all types of devices
+
+              </p>
+            </div>
+            <div class="mt-3 flex justify-between">
+              <div>
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="task btn btn-active btn-primary rounded-lg text-lg p-5 bg-[#3752FD]">Completed</button>
+            </div>
+
+          </div>
+          <div class=" p-6 space-y-4 rounded-2xl bg-[#F4F7FF]">
+            <div class="rounded-2xl px-4 py-2 bg-white w-[33.33%]">
+              <p>ShopEase</p>
+            </div>
+            <h2 class="leading-5 font-medium text-2xl ">Fix Mobile Button Issue</h2>
+            <div class="bg-white p-4 rounded-2xl">
+              <p class="text-gray-300 ">Optimize the buttons in the
+                page for all types of devices
+
+              </p>
+            </div>
+            <div class="mt-3 flex justify-between">
+              <div>
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="task btn btn-active btn-primary rounded-lg text-lg p-5 bg-[#3752FD]">Completed</button>
+            </div>
+
+          </div>
+          <div class=" p-6 space-y-4 rounded-2xl bg-[#F4F7FF]">
+            <div class="rounded-2xl px-4 py-2 bg-white w-[33.33%]">
+              <p>ShopEase</p>
+            </div>
+            <h2 class="leading-5 font-medium text-2xl ">Fix Mobile Button Issue</h2>
+            <div class="bg-white p-4 rounded-2xl">
+              <p class="text-gray-300 ">Optimize the buttons in the
+                page for all types of devices
+
+              </p>
+            </div>
+            <div class="mt-3 flex justify-between">
+              <div>
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="task btn btn-active btn-primary rounded-lg text-lg p-5 bg-[#3752FD]">Completed</button>
+            </div>
+
+          </div>
+          <div class=" p-6 space-y-4 rounded-2xl bg-[#F4F7FF]">
+            <div class="rounded-2xl px-4 py-2 bg-white w-[33.33%]">
+              <p>ShopEase</p>
+            </div>
+            <h2 class="leading-5 font-medium text-2xl ">Fix Mobile Button Issue</h2>
+            <div class="bg-white p-4 rounded-2xl">
+              <p class="text-gray-300 ">Optimize the buttons in the
+                page for all types of devices
+
+              </p>
+            </div>
+            <div class="mt-3 flex justify-between">
+              <div>
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="task btn btn-active btn-primary rounded-lg text-lg p-5 bg-[#3752FD]">Completed</button>
+            </div>
+
+          </div>
+          <div class=" p-6 space-y-4 rounded-2xl bg-[#F4F7FF]">
+            <div class="rounded-2xl px-4 py-2 bg-white w-[33.33%]">
+              <p>ShopEase</p>
+            </div>
+            <h2 class="leading-5 font-medium text-2xl ">Fix Mobile Button Issue</h2>
+            <div class="bg-white p-4 rounded-2xl">
+              <p class="text-gray-300 ">Optimize the buttons in the
+                page for all types of devices
+
+              </p>
+            </div>
+            <div class="mt-3 flex justify-between">
+              <div>
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="task btn btn-active btn-primary rounded-lg text-lg p-5 bg-[#3752FD]">Completed</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div id="activity-container" class=" flex flex-col bg-white rounded-2xl w-[23.83vw]">
+        <div class=" flex mb-2 gap-3 justify-center px-5 pt-5">
+          <img src="assets/activity.png" alt="">
+          <p>Activity Log</p>
+        </div>
+        <div class="flex justify-center"> <button id="clear-history"
+            class=" btn btn-active btn-primary rounded-lg text-lg w-52 mb-5 p-5 bg-[#3752FD]">Clear History</button>
+        </div>
+        <hr class=" text-[#F4F7FF] border-[2px] mb-5 border-dashed">
+        <div id="activity-history" class="m-5 rounded">
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+    const currentHour = new Date().getHours();
+        let currentMinute = new Date().getMinutes();
+        let currentsSecond = new Date().getSeconds();
+        console.log(currentHour);
+        let ampm = '';
+        if (currentHour >= 12) {
+          ampm = 'PM';
+          currentHour = currentHour - 12;
+        } else {
+          ampm = 'AM';
+        }
+        const currentTime = currentHour + ':' + currentMinute + ':' + currentsSecond + ' ' + ampm;
+        const  CurrentTime = currentTime.toString();
+        console.log(CurrentTime);
+
+        document.getElementById('tasks-container').addEventListener('click', function (event) {
+      if (event.target.classList.contains('task')) {
+        alert('Board updated successfully!');
+        event.target.classList.add('challenge')
+        const challenge = document.getElementsByClassName('challenge');
+        if (challenge.length == 6) {
+          alert('Congratulations! You have completed all the tasks');
+        }
+        event.target.disabled = true;
+        const newTaskCompleted = document.createElement('p');
+        const CompletedButtonDiv = event.target.parentNode;
+        const CompletedTaskTitle = CompletedButtonDiv.parentNode.querySelector('h2').innerText;
+        newTaskCompleted.innerText = 'You have completed the task ' + CompletedTaskTitle + ' at ' + CurrentTime;
+        newTaskCompleted.classList.add('rounded-lg');
+        newTaskCompleted.classList.add('bg-[#F4F7FF]');
+        newTaskCompleted.classList.add('p-3');
+        newTaskCompleted.classList.add('text-[16px]', 'p-3', 'mb-3', 'bg-[#F4F7FF]', 'rounded-lg', 'mx-3');
+        const ActivityHistory = document.getElementById('activity-history')
+        ActivityHistory.append(newTaskCompleted)
+        const TaskCompleted = document.getElementById('task-completed');
+        TaskCompleted.innerText = parseInt(TaskCompleted.innerText) + 1;
+        const TaskAssigned = document.getElementById('task-assigned');
+        TaskAssigned.innerText = parseInt(TaskAssigned.innerText) - 1;
+      }
+    });
+    document.getElementById('clear-history').addEventListener('click', function () {
+      const ActivityHistory = document.getElementById('activity-history')
+      ActivityHistory.innerHTML = ``;
+
+    })
+    currentDate = new Date().toDateString();
+    const day = currentDate.slice(0,3);
+    const date = currentDate.slice(4,17);
+    document.getElementById('current-day').innerText = day;
+    document.getElementById('curent-date-1').innerText = date;
+    let randomColorPicker = Math.floor(Math.random() * 16777215).toString(16);
+    console.log(randomColorPicker);
+    document.getElementById('color-picker').addEventListener('click',function(){
+      let reds = Math.floor(Math.random()*256);
+      let greens = Math.floor(Math.random()*256);
+      let blues = Math.floor(Math.random()*256);
+      let colorpicker = `rgb(${reds},${greens},${blues})`;
+      document.body.style.backgroundColor = colorpicker; 
+    })
+  </script>
+
 </body>
+
 </html>
